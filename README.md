@@ -7,5 +7,5 @@
 
 Not so much to find here currently but I belive everything comes from nought and hard work. 
 
-![](https://github-readme-stats.vercel.app/api?username=YJY1029)
+![](https://github-readme-stats.vercel.app/api?username=YJY1029&theme=dark)
 
