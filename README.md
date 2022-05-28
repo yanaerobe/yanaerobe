@@ -4,7 +4,7 @@
 
 - 🔬 Digital IC, symbolic AI accelerator, hardware algorithm. 
 - 🔨 Working on [ReMap](https://github.com/yanjyang/ReMap), a logarithmic conversion circuit optimization. 
-- 🌱 Learning CHISEL and preparing to transplant my previous work. 
+- 🌱 Learning CHISEL and preparing to transplant [my previous work](https://github.com/yanjyang/conm). 
 
 ![](https://github-readme-stats.vercel.app/api?username=yanjyang&theme=dark)
 
