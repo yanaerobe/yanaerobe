@@ -2,10 +2,10 @@
 
 ## Still learning, always learning. 
 
-- 🔬 Digital IC, cognitive hardware, hardware algorithms. 
+- 🔬 Digital IC, cognitive systems, hardware algorithms. 
 - 🔨 Previously worked on [ReMap](https://github.com/yanjyang/ReMap), a logarithmic conversion circuit optimization. 
 - 🌱 Learning Python and CHISEL, WSL and Vim. 
-- :bulb: Mostly working in organization repos while GitHub is my playground after work. 
+- :battery: GitHub is my playground off work.
 
 ![](https://github-readme-stats.vercel.app/api?username=yanjyang&theme=dark)
 
