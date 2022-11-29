@@ -4,11 +4,12 @@ plugins=(git autojump ubuntu emoji python vscode timer themes vi-mode zsh-autosu
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export engate=s2161853@sshgate.eng.ed.ac.uk
 
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="random"
-# ZSH_THEME_RANDOM_CANDIDATES=( "geoffgarside" "ys" "kafeitu" "fletcherm" "dieter" "agnoster" )
+# ZSH_THEME_RANDOM_CANDIDATES=( "geoffgarside" "ys" "kafeitu" "fletcherm" "dieter" "agnoster" "juanghurtado" "af-magic" )
 
 # use case-sensitive completion.
 # CASE_SENSITIVE="true"
