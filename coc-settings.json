@@ -1,0 +1,32 @@
+{
+  "coc.preferences.enableLinkedEditing": true,
+  "coc.preferences.extensionUpdateCheck": "weekly",
+  "coc.preferences.formatOnSave": true,
+  "codeLens.enable": true,
+  "diagnostic.hintSign": "..",
+  "diagnostic.infoSign": "i:",
+  "diagnostic.warningSign": "!!",
+  "suggest.noselect": true,
+  "markdownlint.config": {
+    "line_length": false
+  },
+  "languageserver": {
+    "svlangserver": {
+      "command": "svlangserver",
+      "filetypes": [
+        "systemverilog"
+      ],
+      "settings": {
+        "systemverilog.includeIndexing": [
+          "**/*.{sv,svh}"
+        ],
+        "systemverilog.excludeIndexing": [
+          "test/**/*.sv*"
+        ],
+        "systemverilog.defines": [],
+        "systemverilog.launchConfiguration": "/tools/verilator -sv -Wall --lint-only",
+        "systemverilog.formatCommand": "/tools/verible-verilog-format"
+      }
+    }
+  }
+}

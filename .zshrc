@@ -5,6 +5,7 @@ plugins=(git autojump ubuntu emoji python vscode timer themes vi-mode zsh-autosu
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export engate=s2161853@sshgate.eng.ed.ac.uk
+# export DISPLAY=??????????
 
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
@@ -32,11 +33,20 @@ eval $(thefuck --alias)
 
 [[ -s /home/yjwin/.autojump/etc/profile.d/autojump.sh ]] && source /home/yjwin/.autojump/etc/profile.d/autojump.sh
 
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+bindkey '^ ' autosuggest-accept
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+alias :q="exit"
 
 # Uncomment if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -90,12 +100,3 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
