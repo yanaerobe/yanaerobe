@@ -2,11 +2,11 @@
 " highlight search, ruler
 set ar et sta ic scs nu rnu hls ruler
 
-" Indent: autoindent, expand tab & smart tab, 1 tab = 4 spaces
+" Indent: autoindent, expand tab & smart tab, 1 tab = 2 spaces
 set ai et sta sw=2 ts=2 sts=2
 
 " pop-up menu height, always show signcolumn, set update time to 100ms
-set ph=10 scl=yes ut=100
+set ph=10 scl=yes ut=200
 
 " Neovim: WSL clipboard settings
 let g:clipboard = {
@@ -21,6 +21,9 @@ let g:clipboard = {
             \   },
             \   'cache_enabled': 0,
             \ }
+
+" Neovim: disable mouse pop-up menu
+set mouse=
 
 " Neovim: disable Perl support
 let g:loaded_perl_provider = 0

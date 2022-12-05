@@ -5,7 +5,7 @@ plugins=(git autojump ubuntu emoji python vscode timer themes vi-mode zsh-autosu
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export engate=s2161853@sshgate.eng.ed.ac.uk
-# export DISPLAY=??????????
+# export DISPLAY=192.41.124.231:0.0
 
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
