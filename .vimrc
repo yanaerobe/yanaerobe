@@ -3,7 +3,7 @@
 set ar et sta ic scs nu rnu hls ruler
 
 " Indent: autoindent, expand tab & smart tab, 1 tab = 2 spaces
-set ai et sta sw=2 ts=2 sts=2
+set si et sta sw=2 ts=2 sts=2
 
 " pop-up menu height, always show signcolumn, set update time to 100ms
 set ph=10 scl=yes ut=200

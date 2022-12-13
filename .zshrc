@@ -5,6 +5,7 @@ plugins=(git autojump ubuntu emoji python vscode timer themes vi-mode zsh-autosu
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export engate=s2161853@sshgate.eng.ed.ac.uk
+export forte=129.215.61.252
 # export DISPLAY=192.41.124.231:0.0
 
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -46,7 +47,8 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-alias :q="exit"
+alias :q=exit
+alias vim=nvim
 
 # Uncomment if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
