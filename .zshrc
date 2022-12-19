@@ -4,8 +4,6 @@ plugins=(git autojump ubuntu emoji python vscode timer themes vi-mode zsh-autosu
 
 # Path to oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export engate=s2161853@sshgate.eng.ed.ac.uk
-export forte=129.215.61.252
 # export DISPLAY=192.41.124.231:0.0
 
 # `echo $RANDOM_THEME` for theme name
