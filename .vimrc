@@ -1,6 +1,7 @@
 " General: autoread, ignore case & smart case, number & relative number
 " highlight search, ruler
 set ar et sta ic scs nu rnu hls ruler
+let mapleader = " "
 
 " Indent: autoindent, expand tab & smart tab, 1 tab = 2 spaces
 set si et sta sw=2 ts=2 sts=2
@@ -27,6 +28,10 @@ set mouse=
 
 " Neovim: disable Perl support
 let g:loaded_perl_provider = 0
+
+" Neovim: terminal mode
+autocmd TermOpen * setlocal nonu nornu scl=no
+tnoremap <Esc> <C-\><C-n>
 
 " vim-plug
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
