@@ -50,6 +50,7 @@ call plug#begin()
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+  Plug 'itchyny/vim-cursorword'
 call plug#end()
 
 " coc.nvim: extensions

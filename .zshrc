@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # `echo $RANDOM_THEME` for theme name
 ZSH_THEME="random"
-# ZSH_THEME_RANDOM_CANDIDATES=( "geoffgarside" "ys" "kafeitu" "fletcherm" "dieter" "agnoster" "juanghurtado" "af-magic" )
+# ZSH_THEME_RANDOM_CANDIDATES=( "geoffgarside" "ys" "kafeitu" "fletcherm" "dieter" "agnoster" "juanghurtado" "af-magic" "Soliah")
 
 # use case-sensitive completion.
 # CASE_SENSITIVE="true"
