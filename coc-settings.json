@@ -7,6 +7,10 @@
   "diagnostic.infoSign": "i:",
   "diagnostic.warningSign": "!!",
   "suggest.noselect": true,
+  "pullDiagnostic.onSave": true,
+  "suggest.preferCompleteThanJumpPlaceholder": true,
+  "git.addGBlameToVirtualText": true,
+  "git.blameUseRealTime": true,
   "markdownlint.config": {
     "line_length": false
   },
