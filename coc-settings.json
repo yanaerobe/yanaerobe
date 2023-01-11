@@ -27,6 +27,14 @@
         "systemverilog.launchConfiguration": "/tools/verilator -sv -Wall --lint-only",
         "systemverilog.formatCommand": "/tools/verible-verilog-format"
       }
+    },
+    "digestif": {
+      "command": "digestif",
+      "filetypes": [
+        "tex",
+        "plaintex",
+        "context"
+      ]
     }
   }
 }
