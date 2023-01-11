@@ -1,13 +1,15 @@
 " General: autoread, ignore case & smart case, number & relative number
 " highlight search, ruler
 set ar et sta ic scs nu rnu hls ruler
-let mapleader = " "
 
-" Indent: autoindent, expand tab & smart tab, 1 tab = 2 spaces
-set si et sta sw=2 ts=2 sts=2
+" General: change key
+let mapleader=" "
+
+" Indent: auto&smart indent, expand tab & smart tab, 1 tab = 2 spaces
+set ai si et sta sw=2 ts=2 sts=2
 
 " cmdheight, pop-up menu height, always show signcolumn, set update time to 100ms
-set ch=2 ph=10 scl=yes ut=200
+set ch=2 ph=10 scl=yes ut=100
 
 " Neovim: WSL clipboard settings
 let g:clipboard = {
