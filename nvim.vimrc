@@ -53,7 +53,15 @@ call plug#begin()
   Plug 'vim-airline/vim-airline-themes'
   Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
   Plug 'itchyny/vim-cursorword'
+  Plug 'AndrewRadev/splitjoin.vim'
 call plug#end()
+
+" vim-airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_left_sep='>'
+let g:airline_right_sep='<'
+let g:airline#extensions#tabline#left_sep = '>'
+let g:airline_theme='molokai'
 
 " coc.nvim: extensions
 let g:coc_global_extensions = ['coc-git', 'coc-pyright', 'coc-json', 'coc-markdownlint']
