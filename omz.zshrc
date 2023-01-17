@@ -41,6 +41,7 @@ bindkey '^ ' autosuggest-accept
 # For a full list of active aliases, run `alias`.
 alias :q=exit
 alias vim=nvim
+alias cl=clear
 
 # Uncomment if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"

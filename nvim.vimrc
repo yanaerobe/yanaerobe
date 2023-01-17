@@ -1,12 +1,31 @@
-" General: autoread, ignore case & smart case, number & relative number
-" highlight search, ruler
-set ar et sta ic scs nu rnu hls ruler
+" Lab: 
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
+set laststatus=2
+
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <silent> <A-Left> :tabm -1<CR>
+nnoremap <silent> <A-Right> :tabm +1<CR>
+
+" General: basic
+set nu rnu ruler
+set autoread 
+set expandtab smarttab
+set incsearch hlsearch ignorecase smartcase
+set undofile
 
 " General: change key
 let mapleader=" "
+nnoremap <leader>= :exe "vertical resize " . (winwidth(0) * 4/3)<CR>
 
-" Indent: auto&smart indent, expand tab & smart tab, 1 tab = 2 spaces
-set ai si et sta sw=2 ts=2 sts=2
+" General: remember cursor postion
+autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+
+" Indent: auto indent, expand tab & smart tab, 1 tab = 2 spaces
+set autoindent shiftwidth=2 tabstop=2 softtabstop=2
 
 " cmdheight, pop-up menu height, always show signcolumn, set update time to 100ms
 set ch=2 ph=10 scl=yes ut=100
@@ -35,7 +54,7 @@ let g:loaded_perl_provider = 0
 autocmd TermOpen * setlocal nonu nornu scl=no
 tnoremap <Esc> <C-\><C-n>
 
-" vim-plug
+" vim-plug: need curL
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -57,10 +76,8 @@ call plug#begin()
 call plug#end()
 
 " vim-airline
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_left_sep='>'
-let g:airline_right_sep='<'
-let g:airline#extensions#tabline#left_sep = '>'
 let g:airline_theme='molokai'
 
 " coc.nvim: extensions
