@@ -1,6 +1,8 @@
-" Lab: 
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
-set laststatus=2
+" Source: slows down Vim when used multiple times
+" autocmd BufWritePost $MYVIMRC source $MYVIMRC
+" if has ('nvim')
+"   autocmd BufWritePost ~/.vimrc source ~/.vimrc
+" endif
 
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
@@ -14,21 +16,27 @@ set expandtab smarttab
 set incsearch hlsearch ignorecase smartcase
 set undofile
 
-" General: change key
+" General: indentation & tab
+set autoindent shiftwidth=2 tabstop=2 softtabstop=2
+
+" General: config with nums
+set laststatus=2 cmdheight=2 pumheight=10 signcolumn=yes updatetime=100
+
+" General: leader related basics
 let mapleader=" "
 nnoremap <leader>= :exe "vertical resize " . (winwidth(0) * 4/3)<CR>
+
+" General: Tab navigation
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
 " General: remember cursor postion
 autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
     \ endif
-
-" Indent: auto indent, expand tab & smart tab, 1 tab = 2 spaces
-set autoindent shiftwidth=2 tabstop=2 softtabstop=2
-
-" cmdheight, pop-up menu height, always show signcolumn, set update time to 100ms
-set ch=2 ph=10 scl=yes ut=100
 
 " Neovim: WSL clipboard settings
 let g:clipboard = {
@@ -54,31 +62,39 @@ let g:loaded_perl_provider = 0
 autocmd TermOpen * setlocal nonu nornu scl=no
 tnoremap <Esc> <C-\><C-n>
 
-" vim-plug: need curL
+" vim-plug: curL
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" vim-plug: load plugs
+" vim-plug: in proficiency order
 call plug#begin()
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'preservim/nerdtree'
-  Plug 'tpope/vim-commentary'
-  Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-fugitive'
+  if has('nvim')
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'tpope/vim-fugitive'
+    Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+  endif
+  Plug 'itchyny/vim-cursorword'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-  Plug 'itchyny/vim-cursorword'
+  Plug 'tpope/vim-commentary'
+  Plug 'mbbill/undotree'
+  Plug 'tpope/vim-surround'
+  Plug 'preservim/nerdtree'
   Plug 'AndrewRadev/splitjoin.vim'
+  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
 
 " vim-airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='molokai'
+
+" undotree:
+nnoremap <F5> :UndotreeToggle<CR>
+let g:undotree_SetFocusWhenToggle = 0
 
 " coc.nvim: extensions
 let g:coc_global_extensions = ['coc-git', 'coc-pyright', 'coc-json', 'coc-markdownlint']
@@ -97,12 +113,6 @@ else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
-" Tab navigation
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
 " coc.nvim: navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
@@ -117,18 +127,16 @@ nmap <silent> gr <Plug>(coc-references)
 " Example: `<leader>aap` for current paragraph
 xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
-
-" Remap keys for applying code actions at the cursor position
 nmap <leader>ac  <Plug>(coc-codeaction-cursor)
-" Remap keys for apply code actions affect whole buffer
+" Whole buffer
 nmap <leader>as  <Plug>(coc-codeaction-source)
-" Apply the most preferred quickfix action to fix diagnostic on the current line
+" Quick fix current line
 nmap <leader>qf  <Plug>(coc-fix-current)
 
-" Remap keys for applying refactor code actions
+" Refactor code actions
 nmap <silent> <leader>re <Plug>(coc-codeaction-refactor)
 xmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
 nmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
 
-" Run the Code Lens action on the current line
+" Code Lens current line
 nmap <leader>cl  <Plug>(coc-codelens-action)
