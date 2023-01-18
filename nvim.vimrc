@@ -77,6 +77,7 @@ call plug#begin()
     Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
   endif
   Plug 'itchyny/vim-cursorword'
+  Plug 'Yggdroot/indentLine'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'tpope/vim-commentary'
@@ -85,6 +86,7 @@ call plug#begin()
   Plug 'preservim/nerdtree'
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 call plug#end()
 
 " vim-airline
@@ -94,7 +96,7 @@ let g:airline_theme='molokai'
 
 " undotree:
 nnoremap <F5> :UndotreeToggle<CR>
-let g:undotree_SetFocusWhenToggle = 0
+let g:undotree_SetFocusWhenToggle = 1
 
 " coc.nvim: extensions
 let g:coc_global_extensions = ['coc-git', 'coc-pyright', 'coc-json', 'coc-markdownlint']
