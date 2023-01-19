@@ -92,10 +92,14 @@ call plug#begin()
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 call plug#end()
 
-" vim-airline
+" vim-airline:
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='molokai'
+
+" indentLine:
+let g:vim_json_conceal = 0
+let g:markdown_syntax_conceal = 0
 
 " undotree:
 nnoremap <F5> :UndotreeToggle<CR>
