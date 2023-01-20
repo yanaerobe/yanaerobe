@@ -79,6 +79,7 @@ call plug#begin()
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'tpope/vim-fugitive'
     Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+    Plug 'dhruvasagar/vim-table-mode'
   endif
   Plug 'itchyny/vim-cursorword'
   Plug 'Yggdroot/indentLine'
