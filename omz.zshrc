@@ -1,8 +1,6 @@
 plugins=(
   # lab
   aliases colored-man-pages command-not-found extract pyenv virtualenv emoji-clock rand-quote
-  # external
-  git-auto-status
   # built-ins
   git autojump ubuntu emoji python vscode timer themes vi-mode zsh-autosuggestions
   )
@@ -17,7 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="random"
 ZSH_THEME_RANDOM_CANDIDATES=(
   # external themes
-  "windows" "headline"
+  "windows"
   # built-ins
   "geoffgarside" "ys" "kafeitu" "fletcherm" "dieter" "agnoster" "juanghurtado" "af-magic" "Soliah" "steeef"
   )
