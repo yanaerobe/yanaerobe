@@ -1,4 +1,11 @@
-plugins=(git autojump ubuntu emoji python vscode timer themes vi-mode zsh-autosuggestions)
+plugins=(
+  # lab
+  aliases colored-man-pages command-not-found extract pyenv virtualenv emoji-clock rand-quote
+  # external
+  git-auto-status
+  # built-ins
+  git autojump ubuntu emoji python vscode timer themes vi-mode zsh-autosuggestions
+  )
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -8,7 +15,12 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # `echo $RANDOM_THEME` for theme name
 ZSH_THEME="random"
-# ZSH_THEME_RANDOM_CANDIDATES=( "geoffgarside" "ys" "kafeitu" "fletcherm" "dieter" "agnoster" "juanghurtado" "af-magic" "Soliah" "steeef" )
+ZSH_THEME_RANDOM_CANDIDATES=(
+  # external themes
+  "windows" "headline"
+  # built-ins
+  "geoffgarside" "ys" "kafeitu" "fletcherm" "dieter" "agnoster" "juanghurtado" "af-magic" "Soliah" "steeef"
+  )
 
 # use case-sensitive completion.
 # CASE_SENSITIVE="true"
