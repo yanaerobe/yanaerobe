@@ -42,6 +42,10 @@ autocmd BufReadPost *
     \   exe "normal! g`\"" |
     \ endif
 
+" General: ftdetect
+autocmd BufRead,BufNewFile *.zsh-theme set ft=zsh
+autocmd BufRead,BufNewFile *.zshrc set ft=zsh
+
 " Neovim: WSL clipboard settings
 let g:clipboard = {
       \   'name': 'WslClipboard',
