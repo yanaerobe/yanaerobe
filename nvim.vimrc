@@ -84,6 +84,8 @@ call plug#begin()
     Plug 'tpope/vim-fugitive'
     Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
     Plug 'dhruvasagar/vim-table-mode'
+    " Copilot: invoke `:Copilot setup` after installation
+    Plug 'github/copilot.vim'
   endif
   Plug 'itchyny/vim-cursorword'
   Plug 'Yggdroot/indentLine'
