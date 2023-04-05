@@ -116,6 +116,10 @@ let g:markdown_syntax_conceal = 0
 nnoremap <F5> :UndotreeToggle<CR>
 let g:undotree_SetFocusWhenToggle = 1
 
+" Copilot: 
+imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
+
 " coc.nvim: extensions
 let g:coc_global_extensions = ['coc-git', 'coc-pyright', 'coc-json', 'coc-markdownlint']
 
