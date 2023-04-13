@@ -86,6 +86,11 @@ call plug#begin()
     Plug 'dhruvasagar/vim-table-mode'
     " Copilot: invoke `:Copilot setup` after installation
     Plug 'github/copilot.vim'
+    Plug 'ms-jpq/chadtree', { 'branch': 'chad', 'do': 'python3 -m chadtree deps' }
+  else
+    Plug 'preservim/nerdtree'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
+    Plug 'ryanoasis/vim-devicons'
   endif
   Plug 'itchyny/vim-cursorword'
   Plug 'Yggdroot/indentLine'
@@ -94,7 +99,6 @@ call plug#begin()
   Plug 'tpope/vim-commentary'
   Plug 'mbbill/undotree'
   Plug 'tpope/vim-surround'
-  Plug 'preservim/nerdtree'
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
@@ -114,6 +118,13 @@ endif
 " indentLine:
 let g:vim_json_conceal = 0
 let g:markdown_syntax_conceal = 0
+
+" WHATTree:
+if has('nvim')
+  nnoremap <silent> <F4> :CHADopen<CR>
+else
+  nnoremap <silent> <F4> :NERDTreeToggle<CR>
+endif
 
 " undotree:
 nnoremap <F5> :UndotreeToggle<CR>
