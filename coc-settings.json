@@ -11,9 +11,6 @@
   "suggest.preferCompleteThanJumpPlaceholder": true,
   "git.addGBlameToVirtualText": true,
   "git.blameUseRealTime": true,
-  "markdownlint.config": {
-    "line_length": false
-  },
   "languageserver": {
     "svlangserver": {
       "command": "svlangserver",
