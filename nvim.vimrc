@@ -106,6 +106,9 @@ call plug#begin()
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 call plug#end()
 
+" vim-commentary:
+autocmd FileType systemverilog setlocal commentstring=//\ %s
+
 " vim-airline:
 if has('nvim')
   let g:airline_powerline_fonts = 1
