@@ -25,8 +25,8 @@ set laststatus=2 cmdheight=2 pumheight=10 signcolumn=yes updatetime=100
 let mapleader=" "
 nmap <leader>w :w<CR>
 " tab navigation
-nnoremap <leader>h :tabprevious<CR>
-nnoremap <leader>l :tabnext<CR>
+" nnoremap <leader>h :tabprevious<CR>
+" nnoremap <leader>l :tabnext<CR>
 " window zoom
 nnoremap <leader>= :exe "vertical resize " . (winwidth(0) * 4/3)<CR>
 
@@ -99,8 +99,8 @@ call plug#begin()
   Plug 'tpope/vim-commentary'
   Plug 'mbbill/undotree'
   Plug 'tpope/vim-surround'
-  Plug 'AndrewRadev/splitjoin.vim'
-  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+  " Plug 'AndrewRadev/splitjoin.vim'
+  " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 call plug#end()
 
