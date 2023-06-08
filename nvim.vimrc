@@ -4,10 +4,6 @@
 "   autocmd BufWritePost ~/.vimrc source ~/.vimrc
 " endif
 
-" Lab: tab movement
-nnoremap <silent> <A-Left> :tabm -1<CR>
-nnoremap <silent> <A-Right> :tabm +1<CR>
-
 " General: basic
 set nu rnu ruler
 set autoread 
@@ -25,8 +21,8 @@ set laststatus=2 cmdheight=2 pumheight=10 signcolumn=yes updatetime=100
 let mapleader=" "
 nmap <leader>w :w<CR>
 " tab navigation
-" nnoremap <leader>h :tabprevious<CR>
-" nnoremap <leader>l :tabnext<CR>
+nnoremap <leader>l :bnext<CR>
+nnoremap <leader>h :bprevious<CR>
 " window zoom
 nnoremap <leader>= :exe "vertical resize " . (winwidth(0) * 4/3)<CR>
 
