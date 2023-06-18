@@ -133,6 +133,7 @@ let g:undotree_SetFocusWhenToggle = 1
 
 " Copilot: 
 imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+let g:copilot_enabled = v:false
 let g:copilot_no_tab_map = v:true
 
 " coc.nvim: extensions
