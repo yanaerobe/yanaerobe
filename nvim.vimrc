@@ -1,8 +1,9 @@
-" Source: slows down Vim when used multiple times
-" autocmd BufWritePost $MYVIMRC source $MYVIMRC
-" if has ('nvim')
-"   autocmd BufWritePost ~/.vimrc source ~/.vimrc
-" endif
+" Lab: conflict navigation
+nmap [c <Plug>(coc-git-prevconflict)
+nmap ]c <Plug>(coc-git-nextconflict)
+
+" Lab: show commit in current position
+nmap gcm <Plug>(coc-git-commit)
 
 " General: basic
 set nu rnu ruler

@@ -11,6 +11,8 @@
   "suggest.preferCompleteThanJumpPlaceholder": true,
   "git.addGBlameToVirtualText": true,
   "git.blameUseRealTime": true,
+  "git.stagedDecorator": "S",
+  "git.conflict.enabled": false,
   "languageserver": {
     "svlangserver": {
       "command": "svlangserver",
