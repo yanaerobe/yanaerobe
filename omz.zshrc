@@ -29,11 +29,11 @@ zstyle ':omz:update' mode reminder
 # Auto-update frequency (days)
 zstyle ':omz:update' frequency 7
 
-export PATH=$PATH:home/yjwin/.local/bin:$HOME/.config/yarn/global/node_modules/.bin:/$HOME/.yarn/bin
+export PATH=$PATH:$HOME/.local/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.yarn/bin
 
 eval $(thefuck --alias)
 
-[[ -s /home/yjwin/.autojump/etc/profile.d/autojump.sh ]] && source /home/yjwin/.autojump/etc/profile.d/autojump.sh
+[[ -s /home/yanj/.autojump/etc/profile.d/autojump.sh ]] && source /home/yanj/.autojump/etc/profile.d/autojump.sh
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
