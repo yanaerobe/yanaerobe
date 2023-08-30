@@ -34,29 +34,31 @@ zstyle ':omz:update' mode reminder
 # Auto-update frequency (days)
 zstyle ':omz:update' frequency 7
 
-export PATH=$PATH:$HOME/.local/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.yarn/bin
-
+# thefuck
 eval $(thefuck --alias)
 
+# autojump path
 [[ -s /home/yanj/.autojump/etc/profile.d/autojump.sh ]] && source /home/yanj/.autojump/etc/profile.d/autojump.sh
 
+# autosuggestions
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+bindkey '^ ' autosuggest-accept
 
+# NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Use another custom folder than $ZSH/custom
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-source $ZSH/oh-my-zsh.sh
-bindkey '^ ' autosuggest-accept
+ZSH_CUSTOM=~/.oh-my-zsh/custom
 
 # Personal aliases
 # For a full list of active aliases, run `alias`.
 alias :q=exit
 alias vim=nvim
 alias cl=clear
+
+source $ZSH/oh-my-zsh.sh
 
 # Uncomment if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
