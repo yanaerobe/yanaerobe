@@ -1,3 +1,8 @@
+export PATH=$PATH:$HOME/.local/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.yarn/bin:$HOME/gems/bin
+
+# Gems
+export GEM_HOME=$HOME/gems
+
 plugins=(
   # lab
   aliases colored-man-pages command-not-found extract pyenv virtualenv emoji-clock rand-quote
