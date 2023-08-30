@@ -13,14 +13,14 @@ plugins=(
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="/etc/oh-my-zsh"
 # export DISPLAY=192.41.124.231:0.0
 
 # `echo $RANDOM_THEME` for theme name
 ZSH_THEME="random"
 ZSH_THEME_RANDOM_CANDIDATES=(
   # external themes
-  "windows" "saf"
+  # "windows" "saf"
   # built-ins
   "geoffgarside" "ys" "kafeitu" "fletcherm" "dieter" "agnoster" "juanghurtado" "af-magic" "Soliah" "steeef"
   )
