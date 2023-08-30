@@ -44,19 +44,19 @@ autocmd BufRead,BufNewFile *.zsh-theme set ft=zsh
 autocmd BufRead,BufNewFile *.zshrc set ft=zsh
 
 if has('nvim')
-  " Neovim: WSL clipboard settings
-  let g:clipboard = {
-        \   'name': 'WslClipboard',
-        \   'copy': {
-        \      '+': 'clip.exe',
-        \      '*': 'clip.exe',
-        \    },
-        \   'paste': {
-        \      '+': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-        \      '*': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-        \   },
-        \   'cache_enabled': 0,
-        \ }
+  " " Neovim: WSL clipboard settings
+  " let g:clipboard = {
+  "       \   'name': 'WslClipboard',
+  "       \   'copy': {
+  "       \      '+': 'clip.exe',
+  "       \      '*': 'clip.exe',
+  "       \    },
+  "       \   'paste': {
+  "       \      '+': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+  "       \      '*': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+  "       \   },
+  "       \   'cache_enabled': 0,
+  "       \ }
 
   " Neovim: disable mouse pop-up menu
   set mouse=
@@ -134,7 +134,7 @@ let g:undotree_SetFocusWhenToggle = 1
 
 " Copilot: 
 imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
-let g:copilot_enabled = v:false
+" let g:copilot_enabled = v:false
 let g:copilot_no_tab_map = v:true
 
 " coc.nvim: extensions
