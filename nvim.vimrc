@@ -1,10 +1,4 @@
-" Lab: conflict navigation
-nmap [c <Plug>(coc-git-prevconflict)
-nmap ]c <Plug>(coc-git-nextconflict)
-
-" Lab: show commit in current position
-nmap gcm <Plug>(coc-git-commit)
-
+" TODO: modularise
 " General: basic
 set nu rnu ruler
 set autoread 
@@ -21,11 +15,24 @@ set laststatus=2 cmdheight=2 pumheight=10 signcolumn=yes updatetime=100
 " General: leader related basics
 let mapleader=" "
 nmap <leader>w :w<CR>
-" tab navigation
+" buffer navigation
 nnoremap <leader>l :bnext<CR>
 nnoremap <leader>h :bprevious<CR>
 " window zoom
 nnoremap <leader>= :exe "vertical resize " . (winwidth(0) * 4/3)<CR>
+
+" Lab: LeaderF functions
+nnoremap <silent> <leader>F :Leaderf rg<CR>
+nnoremap <silent> <leader>m :Leaderf mru<CR>
+let g:Lf_TabpagePosition = 3
+if has('nvim')
+  let g:Lf_StlSeparator = { 'left': '', 'right': '' }
+endif
+
+" Lab: tab navigation
+nnoremap <leader>N :tabnew<CR>
+nnoremap <leader>L :tabNext<CR>
+nnoremap <leader>H :tabprevious<CR>
 
 " General: window navigation
 map <C-j> <C-W>j
@@ -175,9 +182,16 @@ nmap <leader>as  <Plug>(coc-codeaction-source)
 nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Refactor code actions
-nmap <silent> <leader>re <Plug>(coc-codeaction-refactor)
-xmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
-nmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
+nmap <silent> <leader>rf <Plug>(coc-codeaction-refactor)
+xmap <silent> <leader>rs  <Plug>(coc-codeaction-refactor-selected)
+nmap <silent> <leader>rs  <Plug>(coc-codeaction-refactor-selected)
 
 " Code Lens current line
 nmap <leader>cl  <Plug>(coc-codelens-action)
+
+" Conflict navigation
+nmap [c <Plug>(coc-git-prevconflict)
+nmap ]c <Plug>(coc-git-nextconflict)
+
+" Show commit in current position
+nmap gcm <Plug>(coc-git-commit)
