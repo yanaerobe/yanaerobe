@@ -1,4 +1,4 @@
-" coc.nvim settings
+" coc.nvim configs
 
 " Extensions
 let g:coc_global_extensions = ['coc-git', 'coc-pyright', 'coc-json', 'coc-markdownlint', 'coc-sh']
