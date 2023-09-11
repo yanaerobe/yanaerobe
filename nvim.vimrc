@@ -21,19 +21,6 @@ nnoremap <leader>h :bprevious<CR>
 " window zoom
 nnoremap <leader>= :exe "vertical resize " . (winwidth(0) * 4/3)<CR>
 
-" Lab: LeaderF functions
-nnoremap <silent> <leader>F :Leaderf rg<CR>
-nnoremap <silent> <leader>m :Leaderf mru<CR>
-let g:Lf_TabpagePosition = 3
-if has('nvim')
-  let g:Lf_StlSeparator = { 'left': '', 'right': '' }
-endif
-
-" Lab: tab navigation
-nnoremap <leader>N :tabnew<CR>
-nnoremap <leader>L :tabNext<CR>
-nnoremap <leader>H :tabprevious<CR>
-
 " General: window navigation
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -105,10 +92,21 @@ call plug#begin()
   Plug 'tpope/vim-commentary'
   Plug 'mbbill/undotree'
   Plug 'tpope/vim-surround'
-  " Plug 'AndrewRadev/splitjoin.vim'
-  " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 call plug#end()
+
+" Lab: LeaderF functions
+nnoremap <silent> <leader>F :Leaderf rg<CR>
+nnoremap <silent> <leader>m :Leaderf mru<CR>
+let g:Lf_TabpagePosition = 3
+if has('nvim')
+  let g:Lf_StlSeparator = { 'left': '', 'right': '' }
+endif
+
+" Lab: tab navigation
+nnoremap <leader>N :tabnew<CR>
+nnoremap <leader>L :tabNext<CR>
+nnoremap <leader>H :tabprevious<CR>
 
 " vim-commentary:
 autocmd FileType systemverilog setlocal commentstring=//\ %s
