@@ -30,6 +30,7 @@ call plug#begin()
   Plug 'mbbill/undotree'
   Plug 'tpope/vim-surround'
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+  Plug 'jbgutierrez/vim-better-comments'
 call plug#end()
 
 " Lab: LeaderF functions
@@ -71,5 +72,5 @@ let g:undotree_SetFocusWhenToggle = 1
 
 " Copilot: 
 imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
-" let g:copilot_enabled = v:false
+let g:copilot_enabled = v:false
 let g:copilot_no_tab_map = v:true
