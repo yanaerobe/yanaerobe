@@ -9,7 +9,7 @@ set undofile
 set autoindent shiftwidth=2 tabstop=2 softtabstop=2
 
 " General: config with nums
-set laststatus=2 cmdheight=2 pumheight=10 signcolumn=yes updatetime=100
+set laststatus=2 cmdheight=2 scrolloff=3 pumheight=10 signcolumn=yes updatetime=100
 
 " General: window navigation
 map <C-j> <C-W>j
