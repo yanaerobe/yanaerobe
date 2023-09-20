@@ -25,6 +25,8 @@ nnoremap <leader>l :bnext<CR>
 nnoremap <leader>h :bprevious<CR>
 " Window zoom
 nnoremap <leader>= :exe "vertical resize " . (winwidth(0) * 4/3)<CR>
+" Lab: cancel highlight
+noremap <leader>/ :noh<CR>
 
 " Lab: tab navigation
 nnoremap <leader>N :tabnew<CR>
