@@ -17,6 +17,7 @@ call plug#begin()
     " Copilot: invoke `:Copilot setup` after installation
     Plug 'github/copilot.vim'
     Plug 'ms-jpq/chadtree', { 'branch': 'chad', 'do': 'python3 -m chadtree deps' }
+    Plug 'junegunn/vim-easy-align'
   else
     Plug 'preservim/nerdtree'
     Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -32,7 +33,13 @@ call plug#begin()
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 call plug#end()
 
-" Lab: LeaderF functions
+" Lab: vim-easy-align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+" LeaderF functions
 nnoremap <silent> <leader>F :Leaderf rg<CR>
 nnoremap <silent> <leader>m :Leaderf mru<CR>
 let g:Lf_TabpagePosition = 3
