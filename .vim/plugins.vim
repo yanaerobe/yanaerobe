@@ -13,11 +13,13 @@ call plug#begin()
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'tpope/vim-fugitive'
     Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-    Plug 'dhruvasagar/vim-table-mode'
     " Copilot: invoke `:Copilot setup` after installation
     Plug 'github/copilot.vim'
+    Plug 'dhruvasagar/vim-table-mode'
     Plug 'ms-jpq/chadtree', { 'branch': 'chad', 'do': 'python3 -m chadtree deps' }
+    " Lab: 
     Plug 'junegunn/vim-easy-align'
+    Plug 'yaegassy/coc-black-formatter', {'do': 'yarn install --frozen-lockfile'}
   else
     Plug 'preservim/nerdtree'
     Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -27,10 +29,10 @@ call plug#begin()
   Plug 'Yggdroot/indentLine'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
   Plug 'tpope/vim-commentary'
   Plug 'mbbill/undotree'
   Plug 'tpope/vim-surround'
-  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 call plug#end()
 
 " Lab: vim-easy-align

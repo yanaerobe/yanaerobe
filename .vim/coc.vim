@@ -1,7 +1,17 @@
 " coc.nvim configs
 
 " Extensions
-let g:coc_global_extensions = ['coc-git', 'coc-pyright', 'coc-json', 'coc-markdownlint', 'coc-sh']
+let g:coc_global_extensions = [
+      \ 'coc-git', 'coc-pyright', 'coc-json', 'coc-markdownlint',
+      \ 'coc-sh', 'coc-calc', 'coc-diagnostic', 'coc-vimlsp',
+      \ 'coc-syntax'
+      \ ]
+
+" Lab: coc-calc
+" append result on current expression
+nmap <Leader>ca <Plug>(coc-calc-result-append)
+" replace result on current expression
+nmap <Leader>cr <Plug>(coc-calc-result-replace)
 
 " TAB for completion
 inoremap <silent><expr> <TAB>
