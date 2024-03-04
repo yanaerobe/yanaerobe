@@ -67,6 +67,8 @@ zstyle ':omz:update' frequency 7
 # HIST_STAMPS="yyyy-mm-dd"
 
 # thefuck
+export PATH=$PATH:$HOME.local/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.yarn/bin:$HOME/.local/bin
+
 eval $(thefuck --alias)
 
 # autojump path
