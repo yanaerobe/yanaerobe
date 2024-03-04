@@ -1,3 +1,4 @@
+# TODO: replace $(git_prompt_info) with $(branch_prompt_info) in $ZSH/themes/
 export PATH=$PATH:$HOME/.local/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.yarn/bin:$HOME/gems/bin
 
 # Gems
@@ -5,7 +6,7 @@ export GEM_HOME=$HOME/gems
 
 plugins=(
   # lab
-  pyenv rand-quote fancy-ctrl-z
+  pyenv rand-quote branch
   # built-ins
   aliases autojump colored-man-pages command-not-found extract emoji git python timer themes ubuntu vscode vi-mode virtualenv zsh-autosuggestions
   )
@@ -74,6 +75,8 @@ eval $(thefuck --alias)
 # autojump path
 [[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
 
+source $ZSH/oh-my-zsh.sh
+
 # autosuggestions
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 bindkey '^ ' autosuggest-accept
@@ -88,12 +91,10 @@ ZSH_CUSTOM=~/.oh-my-zsh/custom
 
 # Personal aliases
 # For a full list of active aliases, run `alias`.
-alias :q  = exit
-# alias vi  = nvim
-alias vim = nvim
-alias cl  = clear
-
-source $ZSH/oh-my-zsh.sh
+alias :q=exit
+# alias vi=nvim
+alias vim=nvim
+alias cl=clear
 
 # User configuration
 
