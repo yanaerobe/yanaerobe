@@ -1,4 +1,5 @@
 {
+  "black-formatter.showNotifications": "onWarning",
   "coc.preferences.enableLinkedEditing": true,
   "coc.preferences.extensionUpdateCheck": "weekly",
   "codeLens.enable": true,
@@ -8,6 +9,7 @@
   "suggest.noselect": true,
   "pullDiagnostic.onSave": true,
   "suggest.preferCompleteThanJumpPlaceholder": true,
+  "suggest.removeDuplicateItems": true,
   "git.addGBlameToVirtualText": true,
   "git.blameUseRealTime": true,
   "git.stagedDecorator": "S",
