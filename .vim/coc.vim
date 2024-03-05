@@ -3,9 +3,14 @@
 " Extensions
 let g:coc_global_extensions = [
       \ 'coc-git', 'coc-pyright', 'coc-json', 'coc-markdownlint',
-      \ 'coc-sh', 'coc-calc', 'coc-diagnostic', 'coc-vimlsp',
-      \ 'coc-syntax'
+      \ 'coc-sh', 'coc-calc', 'coc-vimlsp', 'coc-syntax'
       \ ]
+
+" Lab: Highlight the symbol and its references when holding the cursor
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Lab: Symbol renaming
+nmap <leader>rn <Plug>(coc-rename)
 
 " Lab: coc-calc
 " append result on current expression

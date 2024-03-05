@@ -1,7 +1,6 @@
 {
   "coc.preferences.enableLinkedEditing": true,
   "coc.preferences.extensionUpdateCheck": "weekly",
-  "coc.preferences.formatOnSave": true,
   "codeLens.enable": true,
   "diagnostic.hintSign": "..",
   "diagnostic.infoSign": "i:",
@@ -14,22 +13,26 @@
   "git.stagedDecorator": "S",
   "git.conflict.enabled": false,
   "languageserver": {
-    "svlangserver": {
-      "command": "svlangserver",
-      "filetypes": [
-        "systemverilog"
+    "verible": {
+      "command": "verible-verilog-ls",
+      "args": [
+        "--wrap_spaces=2"
       ],
-      "settings": {
-        "systemverilog.includeIndexing": [
-          "**/*.{sv,svh}"
-        ],
-        "systemverilog.excludeIndexing": [
-          "test/**/*.sv*"
-        ],
-        "systemverilog.defines": [],
-        "systemverilog.launchConfiguration": "/tools/verilator -sv -Wall --lint-only",
-        "systemverilog.formatCommand": "/tools/verible-verilog-format"
-      }
+      "filetypes": [
+        "verilog",
+        "systemverilog"
+      ]
+    },
+    "hdlChecker": {
+      "command": "hdl_checker",
+      "args": [
+        "--lsp"
+      ],
+      "filetypes": [
+        "vhdl",
+        "verilog",
+        "systemverilog"
+      ]
     },
     "digestif": {
       "command": "digestif",
