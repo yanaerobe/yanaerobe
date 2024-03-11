@@ -25,7 +25,7 @@ call plug#begin()
     Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'ryanoasis/vim-devicons'
   endif
-  Plug 'itchyny/vim-cursorword'
+  " Plug 'itchyny/vim-cursorword'
   Plug 'Yggdroot/indentLine'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
