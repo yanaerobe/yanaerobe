@@ -18,6 +18,9 @@ nmap <Leader>ca <Plug>(coc-calc-result-append)
 " replace result on current expression
 nmap <Leader>cr <Plug>(coc-calc-result-replace)
 
+" Call buffer formatting with `:Format`
+command! -nargs=0 Format :call CocActionAsync('format')
+
 " TAB for completion
 inoremap <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#pum#next(1) :
