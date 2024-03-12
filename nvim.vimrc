@@ -1,3 +1,17 @@
+" Lab: number flipping
+nnoremap ~ :call ToggleCharacterSimpler()<CR>
+
+function! ToggleCharacterSimpler() abort
+  let current_char = getline('.')[col('.') - 1]
+  if current_char == '0'
+    normal! r1l
+  elseif current_char >= '1' && current_char <= '9'
+    normal! r0l
+  else
+    normal! ~
+  endif
+endfunction
+
 " General: basic
 set nu rnu ruler
 set autoread 
