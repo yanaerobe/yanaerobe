@@ -19,7 +19,7 @@
       "command": "verible-verilog-ls",
       "args": [
         "--wrap_spaces=2",
-        "--rules=-parameter-name-style,-line-length"
+        "--rules=-parameter-name-style,-line-length,-package-filename"
       ],
       "filetypes": [
         "verilog",
