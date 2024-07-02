@@ -92,7 +92,8 @@ ZSH_CUSTOM=~/.oh-my-zsh/custom
 # Personal aliases
 # For a full list of active aliases, run `alias`.
 alias :q=exit
-# alias vi=nvim
+alias v=nvim
+alias vi=nvim
 alias vim=nvim
 alias cl=clear
 
