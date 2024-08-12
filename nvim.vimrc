@@ -1,17 +1,3 @@
-" Lab: number flipping
-nnoremap ~ :call ToggleCharacterSimpler()<CR>
-
-function! ToggleCharacterSimpler() abort
-  let current_char = getline('.')[col('.') - 1]
-  if current_char == '0'
-    normal! r1l
-  elseif current_char >= '1' && current_char <= '9'
-    normal! r0l
-  else
-    normal! ~
-  endif
-endfunction
-
 " General: basic
 set nu rnu ruler
 set autoread 
@@ -39,13 +25,28 @@ nnoremap <leader>l :bnext<CR>
 nnoremap <leader>h :bprevious<CR>
 " Window zoom
 nnoremap <leader>= :exe "vertical resize " . (winwidth(0) * 4/3)<CR>
-" Lab: cancel highlight
-noremap <leader>/ :noh<CR>
 
-" Lab: tab navigation
+" Util: flipping
+function! CharFlipping() abort
+  let current_char = getline('.')[col('.') - 1]
+  if current_char == '0'
+    normal! r1l
+  elseif current_char >= '1' && current_char <= '9'
+    normal! r0l
+  else
+    normal! ~
+  endif
+endfunction
+
+nnoremap ~ :call CharFlipping()<CR>
+" Util: cancel highlight
+noremap <silent><leader>/ :noh<CR>
+" Util: tab navigation
 nnoremap <leader>N :tabnew<CR>
 nnoremap <leader>L :tabNext<CR>
 nnoremap <leader>H :tabprevious<CR>
+" Util: word deletion
+imap <C-backspace> <C-\><C-o>db
 
 " General: remember cursor postion
 autocmd BufReadPost *
