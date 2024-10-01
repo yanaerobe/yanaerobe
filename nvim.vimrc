@@ -41,6 +41,8 @@ function! CharFlipping() abort
 endfunction
 
 nnoremap ~ :silent call CharFlipping()<CR>
+" Util: * to highlight without moving
+nnoremap * :keepjumps normal! mi*`i<CR>
 " Util: cancel highlight
 noremap <silent><leader>/ :noh<CR>
 " Util: tab navigation
