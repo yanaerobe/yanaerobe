@@ -40,7 +40,7 @@ function! CharFlipping() abort
   endif
 endfunction
 
-nnoremap ~ :call CharFlipping()<CR>
+nnoremap ~ :silent call CharFlipping()<CR>
 " Util: cancel highlight
 noremap <silent><leader>/ :noh<CR>
 " Util: tab navigation
