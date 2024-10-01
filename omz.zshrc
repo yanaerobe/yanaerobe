@@ -20,6 +20,9 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # `echo $RANDOM_THEME` for theme name
 ZSH_THEME="random"
+ZSH_THEME_RANDOM_IGNORED=(
+  "linuxonly" "emotty" "rixius"
+  )
 ZSH_THEME_RANDOM_CANDIDATES=(
   # external themes
   # "windows" "saf"
