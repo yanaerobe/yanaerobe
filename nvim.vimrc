@@ -1,3 +1,5 @@
+set notgc
+colo vim
 " General: basic
 set nu rnu ruler
 set autoread 
