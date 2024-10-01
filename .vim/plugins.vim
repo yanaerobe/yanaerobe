@@ -11,6 +11,7 @@ endif
 call plug#begin()
   if has('nvim')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'tpope/vim-fugitive'
     Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
     " Copilot: invoke `:Copilot setup` after installation
