@@ -42,8 +42,6 @@ endfunction
 
 nnoremap ~ :silent call CharFlipping()<CR>
 " Util: * to highlight without moving
-nmap n nzz
-nmap N Nzz
 nnoremap * :keepjumps normal! mi*`i<CR>
 " Util: cancel highlight
 noremap <silent><leader>/ :noh<CR>
